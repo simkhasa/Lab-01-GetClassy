@@ -3,12 +3,11 @@ public class Product {
     private String name;
     private String description;
     private double cost;
-
-    /**
-     * @param id product's id
-     * @param name product's name
-     * @param description product's description
-     * @param cost product's cost
+ /**
+     * @param id product id
+     * @param name product name
+     * @param description produc description
+     * @param cost product cost
      */
     public Product(String id, String name, String description, double cost) {
         this.id = id;
@@ -16,65 +15,56 @@ public class Product {
         this.description = description;
         this.cost = cost;
     }
-
     /**
-     * @return return product's id
+     * @return return product id
      */
     public String getID() {
         return id;
     }
-
     /**
-     * @param id the product's id to be set
+     * @param id the product id to be set
      */
     public void setID(String id) {
         this.id = id;
     }
-
     /**
-     * @return return product's name
+     * @return return product name
      */
     public String getName() {
         return name;
     }
-
     /**
-     * @param name the product's name to be set
+     * @param name the product name to be set
      */
     public void setName(String name) {
         this.name = name;
     }
-
     /**
-     * @return return product's description
+     * @return return product description
      */
     public String getDescription() {
         return description;
     }
-
     /**
-     * @param description the product's description to be set
+     * @param description the product description to be set
      */
     public void setDescription(String description) {
         this.description = description;
     }
-
     /**
-     * @return return product's price
+     * @return return product price
      */
     public double getCost() {
         return cost;
     }
-
     /**
-     * @param cost the product's price to be set
+     * @param cost the product price to be set
      */
     public void setCost(double cost) {
         this.cost = cost;
     }
-
     /**
-     * @return return product's name, description, and price
+     * @return return product name, description, and price
      */
     @Override
     public String toString() {
@@ -83,18 +73,16 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + cost +
-                '}';
+             '}';
     }
-
     /**
-     * @return return product's id, name, description, and price in CSV format
+     * @return return product id, name, description, and price in CSV format
      */
     public String toCSV() {
         return id + "," + name + "," + description + "," + cost;
     }
-
     /**
-     * @return return product's name, description, and price in JSON format
+     * @return return product name, description, and price in JSON format
      */
     public String toJSON() {
         return "{" +
@@ -104,9 +92,8 @@ public class Product {
                 ", \"price\":" + cost +
                 '}';
     }
-
     /**
-     * @return return product's name, description, and price in XML format
+     * @return return product name, description, and price in XML format
      */
     public String toXML() {
         return "<Product>" +
@@ -115,7 +102,4 @@ public class Product {
                 "<description>" + description + "</description>" +
                 "<price>" + cost + "</price>" +
                 "</Product>";
-    }
-
-
-}
+    }}
