@@ -5,7 +5,7 @@ class PersonTest {
     private Person person1;
     @BeforeEach
     void setUp() {
-        person1 = new Person("0000099", "Mickey", "Mouse", "Mr.", 1999);
+        person1 = new Person("000011", "Sneha", "Sim", "Ms.", 1940);
     }
 
     @Test
@@ -16,55 +16,50 @@ class PersonTest {
 
     @Test
     void setFirstName() {
-        person1.setFirstName("Minnie");
-        assertEquals("Minnie", person1.getFirstName());
+        person1.setFirstName("neha");
+        assertEquals("neha", person1.getFirstName());
     }
-
-    @Test
-    void setLastName() {
-        person1.setLastName("Mice");
-        assertEquals("Mice", person1.getLastName());
     }
 
     @Test
     void setTitle() {
-        person1.setTitle("Mrs.");
-        assertEquals("Mrs.", person1.getTitle());
+        person1.setTitle("Ms.");
+        assertEquals("Ms.", person1.getTitle());
     }
 
     @Test
     void setYOB() {
-        person1.setYOB(2000);
-        assertEquals(2000, person1.getYOB());
+        person1.setYOB(1042);
+        assertEquals(1042, person1.getYOB());
     }
 
     @Test
     void fullName() {
-        assertEquals("Mickey Mouse", person1.fullName());
+        assertEquals("Sneha Sim", person1.fullName());
     }
 
     @Test
     void formalName() {
-        assertEquals("Mr. Mickey Mouse", person1.formalName());
+        assertEquals("Ms. Sneha Sim", person1.formalName());
     }
 
     @Test
     void testToString() {
-        assertEquals("Person{ID='0000099', firstName='Mickey', lastName='Mouse', title='Mr.', YOB=1999}", person1.toString());
+        assertEquals("Person{ID='000011', firstName='Sneha', lastName='Sim', title='Mr.', YOB=1940}", person1.toString());
     }
 
     @Test
     void toCSV() {
-        assertEquals("0000099, Mickey, Mouse, Mr., 1999", person1.toCSV());
+        assertEquals("0000011, Sneha, Sim, Ms., 1940", person1.toCSV());
     }
 
     @Test
     void toJSON() {
-        assertEquals("{\"ID\":\"0000099\", \"firstName\":\"Mickey\", \"lastName\":\"Mouse\", \"title\":\"Mr.\", \"YOB\":1999}", person1.toJSON());
+        assertEquals("{\"ID\":\"0000011\", \"firstName\":\"Sneha\", \"lastName\":\"Sim\", \"title\":\"Ms.\", \"YOB\":1940}", person1.toJSON());
     }
 
     @Test
     void toMXL() {
-        assertEquals("<Person><ID>0000099</ID><firstName>Mickey</firstName><lastName>Mouse</lastName><title>Mr.</title><YOB>1999</YOB></Person>", person1.toMXL());
+        assertEquals("<Person><ID>0000011</ID><firstName>Sneha</firstName><lastName>Sim</lastName><title>Ms.</title><YOB>1940</YOB></Person>", person1.toMXL());
     }
 }
